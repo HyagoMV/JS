@@ -1,19 +1,4 @@
-/*
-  A Promise representa a conclusão ou falha de uma operação assíncrona. 
-
-  Garantias
-    - Os callbacks adicionados nunca serão executados antes
-    da operção
-    - Os callback serão chamados mesmo sendo adicionados após o SUCESSO ou FALHA
-    da operação
-  
-    Encadema
-*/
-
-
-
 const fs = require('fs')
-const { setTimeout } = require('timers')
 
 p = new Promise((a,b)=>{
   fs.readFile('./t.txt', (err, data)=>{
@@ -24,7 +9,7 @@ p = new Promise((a,b)=>{
   })
 })
 
-
+// Adicionados após o sucesso ou falha da operação
 setTimeout(() => {
   p.then((data)=>{
     console.log('Tudo certo1')
@@ -46,4 +31,4 @@ setTimeout(() => {
     console.log('Tudo certo Finally ')
   })
   
-}, 2000);
+}, 2000); // 2s
