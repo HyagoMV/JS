@@ -13,8 +13,9 @@ async function getPosts() {
   log("Sync F")
   try {
     const json = await res.json() // Blocking... go to background
-  } catch (e) {
     log("Sync G")
+  } catch (e) {
+    log("Sync G Backup")
   }
   log("Sync H")
 }
