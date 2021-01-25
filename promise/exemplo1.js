@@ -7,7 +7,7 @@ log("Sync A")
 fetch('https://my-json-server.typicode.com/typicode/demo/posts')
   // Cadeia de thens
   .then(res => res.json())
-  .then(res => log('THEN 1', res))
+  .then(log)
 
 log("Sync B")
 

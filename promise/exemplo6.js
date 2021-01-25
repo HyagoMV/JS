@@ -5,10 +5,10 @@ const log = console.log;
 log("Sync A")
 
 // Timeout
-fetch('https://my-json-serverNO_EXIST.typicode.com/typicode/demo/posts') // throw TIMEDOUT
+fetch('https://ERROR/typicode/demo/posts') // throw TIMEDOUT
   .then(res => res.json())
   .then(res => log('THEN 1', res))
-  .catch(res => log('CATCH fetch()', res.code));
+  .catch(res => log('CATCH fetch()'));
 
 log("Sync B")
 
